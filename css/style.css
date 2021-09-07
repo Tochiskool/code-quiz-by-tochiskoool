@@ -47,11 +47,22 @@ section{
 section > h1{
     font-size: 180%;
 }
-section > button{
+section > a{
     background-color:var(--decorateEl);
     border-radius: 1rem;
     outline: none;
-    font-size: 80%;
+    font-size: 120%;
     padding: 1%;
     color:var(--fontColor);
+    text-decoration: none;
+}
+a:hover{
+  background-color: var(--backgroundOrange);
+  color:var(--decorateEl);
+  padding: 1.2%;
+}
+a:active{
+  font-size: 80%;
+  background-color:var(--fontColor);
+  color:var(--fontColor);
 }

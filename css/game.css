@@ -47,21 +47,52 @@ section{
 section > h1{
     font-size: 180%;
 }
-section > a{
-    background-color:var(--decorateEl);
-    border-radius: 1rem;
-    outline: none;
-    font-size: 120%;
-    padding: 1%;
-    color:var(--fontColor);
-    text-decoration: none;
+/* Variables */
+:root{
+    --backgroundOrange: #ffd000bd;
+    --fontColor:#ffffff;
+    --decorateEl:#353572;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color:var(--backgroundOrange);
+    border:1.5rem ridge var(--decorateEl);
+    font-size: 100%;
+    line-height: 150%;
+  }
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-a:hover{
-  background-color: var(--backgroundOrange);
-  color:var(--decorateEl);
+
+section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 150%;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 170%;
 }
-a:active{
-  font-size: 80%;
-  background-color:var(--fontColor);
-  color:var(--fontColor);
+section > h1{
+    font-size: 180%;
 }

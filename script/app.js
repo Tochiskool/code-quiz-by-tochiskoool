@@ -51,7 +51,7 @@ window.onload = function initGame(e) {
 //Print questions and answers
 const postQuestion = document.querySelector('#theQuestions');
 const delegate = document.querySelector('#delegateFunctions');
-var currentQuestion, index = 0, answerOptions, correctAnswer;
+var currentQuestion, li, index = 0, answerOptions, correctAnswer;
 function navigateQuestions(direction) {
     index = index + direction;
     if (index < 0) {
@@ -71,25 +71,20 @@ function navigateQuestions(direction) {
     postQuestion.innerHTML = currentQuestion;
     answerOptions.forEach(function (element) {
         console.log(element)
-        var li = document.createElement('li');
-        // li.id += answerOptions.length;
+        li = document.createElement('li');
+        li.id = answerOptions.length;
         li.innerHTML = `<button>${element}</button>`;
         delegate.appendChild(li);
         console.log(li)
     })
+    
 }
 
 function handleClick(event) {
     event.preventDefault();
     //Use event delegation to handle when the user clicks answer
     if (event.target.matches("button")) {
-        for (var i = 0; i < answerOptions.length; i++){
-            if (answerOptions[i] === correctAnswer) {
-                console.log("Correct answer")
-            } else {
-                console.log("Wrong answer")
-           }
-        }
+        navigateQuestions(1);
     }
 }
 
